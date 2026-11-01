@@ -26,7 +26,7 @@ services:
     ports: ["6379:6379"]
 
   minio: # S3-compatible storage for evidence documents (local stand-in for S3)
-    image: minio/minio
+    image: docker.io/pgsty/silo:RELEASE.2026-09-16T00-00-00Z
     command: server /data --console-address ":9001"
     environment:
       MINIO_ROOT_USER: regis
